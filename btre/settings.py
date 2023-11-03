@@ -25,6 +25,7 @@ SECRET_KEY = 'django-insecure-t7wfg50l-s$a4muu-gf0-&s9^8a8&e3@x(0hb17!o!e&ww4&fy
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
@@ -80,8 +82,8 @@ WSGI_APPLICATION = 'btre.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'btredb',
-        'USER': 'postgres',
+        'NAME': 'mirraw_development',
+        'USER': 'shailesh',
         'PASSWORD': '8879',
         'HOST': 'localhost',
     }
@@ -134,3 +136,6 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
